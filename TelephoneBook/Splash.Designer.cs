@@ -1,6 +1,6 @@
 ﻿namespace TelephoneBook
 {
-    partial class Form1
+    partial class splash
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // splash
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.BackgroundImage = global::TelephoneBook.Properties.Resources.splash;
+            this.ClientSize = new System.Drawing.Size(796, 446);
+            this.ControlBox = false;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(796, 446);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(796, 446);
+            this.Name = "splash";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.splash_Load);
+            this.Shown += new System.EventHandler(this.splash_Shown);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
