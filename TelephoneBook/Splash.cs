@@ -34,7 +34,7 @@ namespace TelephoneBook
             {
                 timer = new Timer();
                 // set time interval 5 seconds
-                timer.Interval = 5000;
+                timer.Interval = 3000;
                 timer.Start();
                 timer.Tick += timer_Tick;
             }
