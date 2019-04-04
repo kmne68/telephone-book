@@ -31,12 +31,12 @@
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataEntryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataEntryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phonebookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.microsoftReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -67,6 +67,12 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            // 
             // dataEntryToolStripMenuItem
             // 
             this.dataEntryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -74,6 +80,13 @@
             this.dataEntryToolStripMenuItem.Name = "dataEntryToolStripMenuItem";
             this.dataEntryToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.dataEntryToolStripMenuItem.Text = "Data Entry";
+            // 
+            // phonebookToolStripMenuItem
+            // 
+            this.phonebookToolStripMenuItem.Name = "phonebookToolStripMenuItem";
+            this.phonebookToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.phonebookToolStripMenuItem.Text = "Phonebook";
+            this.phonebookToolStripMenuItem.Click += new System.EventHandler(this.phonebookToolStripMenuItem_Click);
             // 
             // reportsToolStripMenuItem
             // 
@@ -83,29 +96,17 @@
             this.reportsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.reportsToolStripMenuItem.Text = "Reports";
             // 
+            // microsoftReportsToolStripMenuItem
+            // 
+            this.microsoftReportsToolStripMenuItem.Name = "microsoftReportsToolStripMenuItem";
+            this.microsoftReportsToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.microsoftReportsToolStripMenuItem.Text = "Microsoft Reports";
+            // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            // 
-            // phonebookToolStripMenuItem
-            // 
-            this.phonebookToolStripMenuItem.Name = "phonebookToolStripMenuItem";
-            this.phonebookToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.phonebookToolStripMenuItem.Text = "Phonebook";
-            // 
-            // microsoftReportsToolStripMenuItem
-            // 
-            this.microsoftReportsToolStripMenuItem.Name = "microsoftReportsToolStripMenuItem";
-            this.microsoftReportsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.microsoftReportsToolStripMenuItem.Text = "Microsoft Reports";
             // 
             // MainMenu
             // 

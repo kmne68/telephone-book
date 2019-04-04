@@ -29,6 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label person_IDLabel;
+            System.Windows.Forms.Label firstnameLabel;
+            System.Windows.Forms.Label lastnameLabel;
+            System.Windows.Forms.Label addressLabel;
+            System.Windows.Forms.Label cityLabel;
+            System.Windows.Forms.Label stateLabel;
+            System.Windows.Forms.Label zipcodeLabel;
+            System.Windows.Forms.Label homePhoneLabel;
+            System.Windows.Forms.Label workPhoneLabel;
+            System.Windows.Forms.Label extensionLabel;
+            System.Windows.Forms.Label notesLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PhoneBookForm));
             this.contactBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
@@ -48,41 +59,140 @@
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.TB_fname = new System.Windows.Forms.TextBox();
-            this.TB_lname = new System.Windows.Forms.TextBox();
-            this.TB_address = new System.Windows.Forms.TextBox();
-            this.TB_state = new System.Windows.Forms.TextBox();
-            this.TB_zip = new System.Windows.Forms.TextBox();
-            this.TB_city = new System.Windows.Forms.TextBox();
-            this.TB_hphone = new System.Windows.Forms.TextBox();
-            this.TB_wphone = new System.Windows.Forms.TextBox();
-            this.TB_extention = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.phoneBookDataSet1 = new TelephoneBook.PhoneBookDataSet();
-            this.contactBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.phoneBookDataSet = new TelephoneBook.PhoneBookDataSet();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.phonebookTableAdapter1 = new TelephoneBook.PhoneBookDataSetTableAdapters.PhonebookTableAdapter();
-            this.tableAdapterManager1 = new TelephoneBook.PhoneBookDataSetTableAdapters.TableAdapterManager();
+            this.phonebookTableAdapter = new TelephoneBook.PhoneBookDataSetTableAdapters.PhonebookTableAdapter();
+            this.tableAdapterManager = new TelephoneBook.PhoneBookDataSetTableAdapters.TableAdapterManager();
+            this.phonebookBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.person_IDTextBox = new System.Windows.Forms.TextBox();
+            this.firstnameTextBox = new System.Windows.Forms.TextBox();
+            this.lastnameTextBox = new System.Windows.Forms.TextBox();
+            this.addressTextBox = new System.Windows.Forms.TextBox();
+            this.cityTextBox = new System.Windows.Forms.TextBox();
+            this.stateTextBox = new System.Windows.Forms.TextBox();
+            this.zipcodeTextBox = new System.Windows.Forms.TextBox();
+            this.homePhoneTextBox = new System.Windows.Forms.TextBox();
+            this.workPhoneTextBox = new System.Windows.Forms.TextBox();
+            this.extensionTextBox = new System.Windows.Forms.TextBox();
+            this.notesTextBox = new System.Windows.Forms.TextBox();
+            person_IDLabel = new System.Windows.Forms.Label();
+            firstnameLabel = new System.Windows.Forms.Label();
+            lastnameLabel = new System.Windows.Forms.Label();
+            addressLabel = new System.Windows.Forms.Label();
+            cityLabel = new System.Windows.Forms.Label();
+            stateLabel = new System.Windows.Forms.Label();
+            zipcodeLabel = new System.Windows.Forms.Label();
+            homePhoneLabel = new System.Windows.Forms.Label();
+            workPhoneLabel = new System.Windows.Forms.Label();
+            extensionLabel = new System.Windows.Forms.Label();
+            notesLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.contactBindingNavigator)).BeginInit();
             this.contactBindingNavigator.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.phoneBookDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.contactBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phoneBookDataSet)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.phonebookBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // person_IDLabel
+            // 
+            person_IDLabel.AutoSize = true;
+            person_IDLabel.Location = new System.Drawing.Point(44, 96);
+            person_IDLabel.Name = "person_IDLabel";
+            person_IDLabel.Size = new System.Drawing.Size(57, 13);
+            person_IDLabel.TabIndex = 24;
+            person_IDLabel.Text = "Person ID:";
+            // 
+            // firstnameLabel
+            // 
+            firstnameLabel.AutoSize = true;
+            firstnameLabel.Location = new System.Drawing.Point(44, 141);
+            firstnameLabel.Name = "firstnameLabel";
+            firstnameLabel.Size = new System.Drawing.Size(55, 13);
+            firstnameLabel.TabIndex = 26;
+            firstnameLabel.Text = "Firstname:";
+            // 
+            // lastnameLabel
+            // 
+            lastnameLabel.AutoSize = true;
+            lastnameLabel.Location = new System.Drawing.Point(450, 145);
+            lastnameLabel.Name = "lastnameLabel";
+            lastnameLabel.Size = new System.Drawing.Size(56, 13);
+            lastnameLabel.TabIndex = 28;
+            lastnameLabel.Text = "Lastname:";
+            // 
+            // addressLabel
+            // 
+            addressLabel.AutoSize = true;
+            addressLabel.Location = new System.Drawing.Point(44, 188);
+            addressLabel.Name = "addressLabel";
+            addressLabel.Size = new System.Drawing.Size(48, 13);
+            addressLabel.TabIndex = 30;
+            addressLabel.Text = "Address:";
+            // 
+            // cityLabel
+            // 
+            cityLabel.AutoSize = true;
+            cityLabel.Location = new System.Drawing.Point(44, 229);
+            cityLabel.Name = "cityLabel";
+            cityLabel.Size = new System.Drawing.Size(27, 13);
+            cityLabel.TabIndex = 32;
+            cityLabel.Text = "City:";
+            // 
+            // stateLabel
+            // 
+            stateLabel.AutoSize = true;
+            stateLabel.Location = new System.Drawing.Point(296, 229);
+            stateLabel.Name = "stateLabel";
+            stateLabel.Size = new System.Drawing.Size(35, 13);
+            stateLabel.TabIndex = 34;
+            stateLabel.Text = "State:";
+            // 
+            // zipcodeLabel
+            // 
+            zipcodeLabel.AutoSize = true;
+            zipcodeLabel.Location = new System.Drawing.Point(556, 229);
+            zipcodeLabel.Name = "zipcodeLabel";
+            zipcodeLabel.Size = new System.Drawing.Size(49, 13);
+            zipcodeLabel.TabIndex = 36;
+            zipcodeLabel.Text = "Zipcode:";
+            // 
+            // homePhoneLabel
+            // 
+            homePhoneLabel.AutoSize = true;
+            homePhoneLabel.Location = new System.Drawing.Point(44, 278);
+            homePhoneLabel.Name = "homePhoneLabel";
+            homePhoneLabel.Size = new System.Drawing.Size(72, 13);
+            homePhoneLabel.TabIndex = 38;
+            homePhoneLabel.Text = "Home Phone:";
+            // 
+            // workPhoneLabel
+            // 
+            workPhoneLabel.AutoSize = true;
+            workPhoneLabel.Location = new System.Drawing.Point(296, 278);
+            workPhoneLabel.Name = "workPhoneLabel";
+            workPhoneLabel.Size = new System.Drawing.Size(70, 13);
+            workPhoneLabel.TabIndex = 40;
+            workPhoneLabel.Text = "Work Phone:";
+            // 
+            // extensionLabel
+            // 
+            extensionLabel.AutoSize = true;
+            extensionLabel.Location = new System.Drawing.Point(556, 278);
+            extensionLabel.Name = "extensionLabel";
+            extensionLabel.Size = new System.Drawing.Size(56, 13);
+            extensionLabel.TabIndex = 42;
+            extensionLabel.Text = "Extension:";
+            // 
+            // notesLabel
+            // 
+            notesLabel.AutoSize = true;
+            notesLabel.Location = new System.Drawing.Point(44, 326);
+            notesLabel.Name = "notesLabel";
+            notesLabel.Size = new System.Drawing.Size(38, 13);
+            notesLabel.TabIndex = 44;
+            notesLabel.Text = "Notes:";
             // 
             // contactBindingNavigator
             // 
@@ -250,188 +360,10 @@
             this.toolStripButton2.Size = new System.Drawing.Size(111, 22);
             this.toolStripButton2.Text = "Display All Records";
             // 
-            // label1
+            // phoneBookDataSet
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 85);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Person ID:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 126);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Firstname:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 173);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Address:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(29, 218);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(27, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "City:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(29, 262);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 13);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Homephone:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(29, 311);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 13);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Notes:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(255, 262);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(66, 13);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Workphone:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(286, 218);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "State:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(372, 126);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 13);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Lastname:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(543, 218);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(49, 13);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "Zipcode:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(536, 262);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(56, 13);
-            this.label11.TabIndex = 12;
-            this.label11.Text = "Extension:";
-            // 
-            // TB_fname
-            // 
-            this.TB_fname.Location = new System.Drawing.Point(106, 123);
-            this.TB_fname.Name = "TB_fname";
-            this.TB_fname.Size = new System.Drawing.Size(237, 20);
-            this.TB_fname.TabIndex = 13;
-            // 
-            // TB_lname
-            // 
-            this.TB_lname.Location = new System.Drawing.Point(434, 123);
-            this.TB_lname.Name = "TB_lname";
-            this.TB_lname.Size = new System.Drawing.Size(264, 20);
-            this.TB_lname.TabIndex = 14;
-            // 
-            // TB_address
-            // 
-            this.TB_address.Location = new System.Drawing.Point(106, 170);
-            this.TB_address.Name = "TB_address";
-            this.TB_address.Size = new System.Drawing.Size(592, 20);
-            this.TB_address.TabIndex = 15;
-            // 
-            // TB_state
-            // 
-            this.TB_state.Location = new System.Drawing.Point(328, 215);
-            this.TB_state.Name = "TB_state";
-            this.TB_state.Size = new System.Drawing.Size(100, 20);
-            this.TB_state.TabIndex = 16;
-            // 
-            // TB_zip
-            // 
-            this.TB_zip.Location = new System.Drawing.Point(598, 215);
-            this.TB_zip.Name = "TB_zip";
-            this.TB_zip.Size = new System.Drawing.Size(100, 20);
-            this.TB_zip.TabIndex = 17;
-            // 
-            // TB_city
-            // 
-            this.TB_city.Location = new System.Drawing.Point(106, 215);
-            this.TB_city.Name = "TB_city";
-            this.TB_city.Size = new System.Drawing.Size(100, 20);
-            this.TB_city.TabIndex = 18;
-            // 
-            // TB_hphone
-            // 
-            this.TB_hphone.Location = new System.Drawing.Point(106, 259);
-            this.TB_hphone.Name = "TB_hphone";
-            this.TB_hphone.Size = new System.Drawing.Size(100, 20);
-            this.TB_hphone.TabIndex = 19;
-            // 
-            // TB_wphone
-            // 
-            this.TB_wphone.Location = new System.Drawing.Point(328, 259);
-            this.TB_wphone.Name = "TB_wphone";
-            this.TB_wphone.Size = new System.Drawing.Size(100, 20);
-            this.TB_wphone.TabIndex = 20;
-            // 
-            // TB_extention
-            // 
-            this.TB_extention.Location = new System.Drawing.Point(598, 259);
-            this.TB_extention.Name = "TB_extention";
-            this.TB_extention.Size = new System.Drawing.Size(100, 20);
-            this.TB_extention.TabIndex = 21;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(106, 311);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(592, 202);
-            this.richTextBox1.TabIndex = 22;
-            this.richTextBox1.Text = "";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(106, 82);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(237, 20);
-            this.textBox1.TabIndex = 23;
-            // 
-            // phoneBookDataSet1
-            // 
-            this.phoneBookDataSet1.DataSetName = "PhoneBookDataSet";
-            this.phoneBookDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.phoneBookDataSet.DataSetName = "PhoneBookDataSet";
+            this.phoneBookDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // menuStrip1
             // 
@@ -449,43 +381,137 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
-            // phonebookTableAdapter1
+            // phonebookTableAdapter
             // 
-            this.phonebookTableAdapter1.ClearBeforeFill = true;
+            this.phonebookTableAdapter.ClearBeforeFill = true;
             // 
-            // tableAdapterManager1
+            // tableAdapterManager
             // 
-            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager1.PhonebookTableAdapter = this.phonebookTableAdapter1;
-            this.tableAdapterManager1.UpdateOrder = TelephoneBook.PhoneBookDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.PhonebookTableAdapter = this.phonebookTableAdapter;
+            this.tableAdapterManager.UpdateOrder = TelephoneBook.PhoneBookDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // phonebookBindingSource
+            // 
+            this.phonebookBindingSource.DataMember = "Phonebook";
+            this.phonebookBindingSource.DataSource = this.phoneBookDataSet;
+            // 
+            // person_IDTextBox
+            // 
+            this.person_IDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.phonebookBindingSource, "Person_ID", true));
+            this.person_IDTextBox.Location = new System.Drawing.Point(122, 93);
+            this.person_IDTextBox.Name = "person_IDTextBox";
+            this.person_IDTextBox.Size = new System.Drawing.Size(100, 20);
+            this.person_IDTextBox.TabIndex = 25;
+            // 
+            // firstnameTextBox
+            // 
+            this.firstnameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.phonebookBindingSource, "Firstname", true));
+            this.firstnameTextBox.Location = new System.Drawing.Point(122, 138);
+            this.firstnameTextBox.Name = "firstnameTextBox";
+            this.firstnameTextBox.Size = new System.Drawing.Size(208, 20);
+            this.firstnameTextBox.TabIndex = 27;
+            // 
+            // lastnameTextBox
+            // 
+            this.lastnameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.phonebookBindingSource, "Lastname", true));
+            this.lastnameTextBox.Location = new System.Drawing.Point(528, 142);
+            this.lastnameTextBox.Name = "lastnameTextBox";
+            this.lastnameTextBox.Size = new System.Drawing.Size(206, 20);
+            this.lastnameTextBox.TabIndex = 29;
+            // 
+            // addressTextBox
+            // 
+            this.addressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.phonebookBindingSource, "Address", true));
+            this.addressTextBox.Location = new System.Drawing.Point(122, 185);
+            this.addressTextBox.Name = "addressTextBox";
+            this.addressTextBox.Size = new System.Drawing.Size(612, 20);
+            this.addressTextBox.TabIndex = 31;
+            // 
+            // cityTextBox
+            // 
+            this.cityTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.phonebookBindingSource, "City", true));
+            this.cityTextBox.Location = new System.Drawing.Point(122, 226);
+            this.cityTextBox.Name = "cityTextBox";
+            this.cityTextBox.Size = new System.Drawing.Size(100, 20);
+            this.cityTextBox.TabIndex = 33;
+            // 
+            // stateTextBox
+            // 
+            this.stateTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.phonebookBindingSource, "State", true));
+            this.stateTextBox.Location = new System.Drawing.Point(374, 226);
+            this.stateTextBox.Name = "stateTextBox";
+            this.stateTextBox.Size = new System.Drawing.Size(100, 20);
+            this.stateTextBox.TabIndex = 35;
+            // 
+            // zipcodeTextBox
+            // 
+            this.zipcodeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.phonebookBindingSource, "Zipcode", true));
+            this.zipcodeTextBox.Location = new System.Drawing.Point(634, 226);
+            this.zipcodeTextBox.Name = "zipcodeTextBox";
+            this.zipcodeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.zipcodeTextBox.TabIndex = 37;
+            // 
+            // homePhoneTextBox
+            // 
+            this.homePhoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.phonebookBindingSource, "HomePhone", true));
+            this.homePhoneTextBox.Location = new System.Drawing.Point(122, 275);
+            this.homePhoneTextBox.Name = "homePhoneTextBox";
+            this.homePhoneTextBox.Size = new System.Drawing.Size(100, 20);
+            this.homePhoneTextBox.TabIndex = 39;
+            // 
+            // workPhoneTextBox
+            // 
+            this.workPhoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.phonebookBindingSource, "WorkPhone", true));
+            this.workPhoneTextBox.Location = new System.Drawing.Point(374, 275);
+            this.workPhoneTextBox.Name = "workPhoneTextBox";
+            this.workPhoneTextBox.Size = new System.Drawing.Size(100, 20);
+            this.workPhoneTextBox.TabIndex = 41;
+            // 
+            // extensionTextBox
+            // 
+            this.extensionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.phonebookBindingSource, "Extension", true));
+            this.extensionTextBox.Location = new System.Drawing.Point(634, 275);
+            this.extensionTextBox.Name = "extensionTextBox";
+            this.extensionTextBox.Size = new System.Drawing.Size(100, 20);
+            this.extensionTextBox.TabIndex = 43;
+            // 
+            // notesTextBox
+            // 
+            this.notesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.phonebookBindingSource, "Notes", true));
+            this.notesTextBox.Location = new System.Drawing.Point(122, 323);
+            this.notesTextBox.Multiline = true;
+            this.notesTextBox.Name = "notesTextBox";
+            this.notesTextBox.Size = new System.Drawing.Size(612, 193);
+            this.notesTextBox.TabIndex = 45;
             // 
             // PhoneBookForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 551);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.TB_extention);
-            this.Controls.Add(this.TB_wphone);
-            this.Controls.Add(this.TB_hphone);
-            this.Controls.Add(this.TB_city);
-            this.Controls.Add(this.TB_zip);
-            this.Controls.Add(this.TB_state);
-            this.Controls.Add(this.TB_address);
-            this.Controls.Add(this.TB_lname);
-            this.Controls.Add(this.TB_fname);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(person_IDLabel);
+            this.Controls.Add(this.person_IDTextBox);
+            this.Controls.Add(firstnameLabel);
+            this.Controls.Add(this.firstnameTextBox);
+            this.Controls.Add(lastnameLabel);
+            this.Controls.Add(this.lastnameTextBox);
+            this.Controls.Add(addressLabel);
+            this.Controls.Add(this.addressTextBox);
+            this.Controls.Add(cityLabel);
+            this.Controls.Add(this.cityTextBox);
+            this.Controls.Add(stateLabel);
+            this.Controls.Add(this.stateTextBox);
+            this.Controls.Add(zipcodeLabel);
+            this.Controls.Add(this.zipcodeTextBox);
+            this.Controls.Add(homePhoneLabel);
+            this.Controls.Add(this.homePhoneTextBox);
+            this.Controls.Add(workPhoneLabel);
+            this.Controls.Add(this.workPhoneTextBox);
+            this.Controls.Add(extensionLabel);
+            this.Controls.Add(this.extensionTextBox);
+            this.Controls.Add(notesLabel);
+            this.Controls.Add(this.notesTextBox);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.contactBindingNavigator);
             this.Controls.Add(this.menuStrip1);
@@ -498,10 +524,10 @@
             this.contactBindingNavigator.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.phoneBookDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.contactBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phoneBookDataSet)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.phonebookBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -526,34 +552,23 @@
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox TB_fname;
-        private System.Windows.Forms.TextBox TB_lname;
-        private System.Windows.Forms.TextBox TB_address;
-        private System.Windows.Forms.TextBox TB_state;
-        private System.Windows.Forms.TextBox TB_zip;
-        private System.Windows.Forms.TextBox TB_city;
-        private System.Windows.Forms.TextBox TB_hphone;
-        private System.Windows.Forms.TextBox TB_wphone;
-        private System.Windows.Forms.TextBox TB_extention;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private PhoneBookDataSet phoneBookDataSet1;
-        private System.Windows.Forms.BindingSource contactBindingSource;
+        private PhoneBookDataSet phoneBookDataSet;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton tsb_saveContact;
-        private PhoneBookDataSetTableAdapters.PhonebookTableAdapter phonebookTableAdapter1;
-        private PhoneBookDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
+        private PhoneBookDataSetTableAdapters.PhonebookTableAdapter phonebookTableAdapter;
+        private PhoneBookDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingSource phonebookBindingSource;
+        private System.Windows.Forms.TextBox person_IDTextBox;
+        private System.Windows.Forms.TextBox firstnameTextBox;
+        private System.Windows.Forms.TextBox lastnameTextBox;
+        private System.Windows.Forms.TextBox addressTextBox;
+        private System.Windows.Forms.TextBox cityTextBox;
+        private System.Windows.Forms.TextBox stateTextBox;
+        private System.Windows.Forms.TextBox zipcodeTextBox;
+        private System.Windows.Forms.TextBox homePhoneTextBox;
+        private System.Windows.Forms.TextBox workPhoneTextBox;
+        private System.Windows.Forms.TextBox extensionTextBox;
+        private System.Windows.Forms.TextBox notesTextBox;
     }
 }

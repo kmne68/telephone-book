@@ -19,7 +19,8 @@ namespace TelephoneBook
 
         private void PhoneBookForm_Load(object sender, EventArgs e)
         {
-
+           // this.customersTableAdapter.Fill(this.calicuttDataSet.Customers);
+            this.phonebookTableAdapter.Fill(this.phoneBookDataSet.Phonebook);
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -30,9 +31,29 @@ namespace TelephoneBook
         private void tsb_saveContact_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.contactBindingSource.EndEdit();
-            this.tableAdapterManager1.UpdateAll(this.phoneBookDataSet1);
+            this.phonebookBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.phoneBookDataSet);
         }
+
+        //private void toolStripButton1_Click(object sender, EventArgs e)
+        //{
+        //        string contactLastname = toolStripTextBox1.Text.Trim();
+        //        try
+        //        {
+        //        this.phonebookTableAdapter.FillByContactLastName(this.phoneBookDataSet1.Phonebook, contactLastname);
+        //            if (this.contactBindingSource.Count == 0)
+        //            {
+        //                MessageBox.Show("No customers records found for " + contactLastname);
+        //            this.phonebookTableAdapter.Fill(this.phoneBookDataSet1.Phonebook);
+        //            }
+        //        }
+        //        catch (Exception ex)
+        //        {
+
+        //            MessageBox.Show(ex.Message);
+        //        }
+
+        //}        
     }
 }
 
@@ -42,45 +63,6 @@ namespace SQLServerDemo2
 {
     public partial class Form1 : Form
     {
-
-        private void customersBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.customersBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.calicuttDataSet);
-
-        }
-
-        private void customersBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.customersBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.calicuttDataSet);
-
-        }
-
-        private void customersBindingNavigatorSaveItem_Click_2(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.customersBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.calicuttDataSet);
-
-        }
-
-        private void customersBindingNavigatorSaveItem_Click_3(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.customersBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.calicuttDataSet);
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'calicuttDataSet.Customers' table. You can move, or remove it, as needed.
-            this.customersTableAdapter.Fill(this.calicuttDataSet.Customers);
-
-        }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {

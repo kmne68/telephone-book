@@ -16,5 +16,11 @@ namespace TelephoneBook
         {
             InitializeComponent();
         }
+
+        private void phonebookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PhoneBookForm frm = new PhoneBookForm();
+            frm.Show();
+        }
     }
 }
