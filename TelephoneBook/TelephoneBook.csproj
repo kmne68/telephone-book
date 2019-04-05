@@ -47,10 +47,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DisplayRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayRecords.Designer.cs">
+      <DependentUpon>DisplayRecords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneBookDataSet.cs">
+      <DependentUpon>PhoneBookDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="PhoneBookDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PhoneBookDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneBookDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PhoneBookDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="PhoneBookForm.cs">
       <SubType>Form</SubType>
@@ -72,6 +86,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DisplayRecords.resx">
+      <DependentUpon>DisplayRecords.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PhoneBookForm.resx">
       <DependentUpon>PhoneBookForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -101,6 +118,17 @@
     </None>
     <None Include="PhoneBookDataSet.xss">
       <DependentUpon>PhoneBookDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PhoneBookDataSet1.xsc">
+      <DependentUpon>PhoneBookDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PhoneBookDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PhoneBookDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PhoneBookDataSet1.xss">
+      <DependentUpon>PhoneBookDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -20,9 +20,9 @@ namespace TelephoneBook {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("PhoneBookDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("PhoneBookDataSet1")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class PhoneBookDataSet : global::System.Data.DataSet {
+    public partial class PhoneBookDataSet1 : global::System.Data.DataSet {
         
         private PhonebookDataTable tablePhonebook;
         
@@ -30,7 +30,7 @@ namespace TelephoneBook {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public PhoneBookDataSet() {
+        public PhoneBookDataSet1() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace TelephoneBook {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected PhoneBookDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected PhoneBookDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace TelephoneBook {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            PhoneBookDataSet cln = ((PhoneBookDataSet)(base.Clone()));
+            PhoneBookDataSet1 cln = ((PhoneBookDataSet1)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace TelephoneBook {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "PhoneBookDataSet";
+            this.DataSetName = "PhoneBookDataSet1";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/PhoneBookDataSet.xsd";
+            this.Namespace = "http://tempuri.org/PhoneBookDataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tablePhonebook = new PhonebookDataTable();
@@ -225,7 +225,7 @@ namespace TelephoneBook {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            PhoneBookDataSet ds = new PhoneBookDataSet();
+            PhoneBookDataSet1 ds = new PhoneBookDataSet1();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -634,7 +634,7 @@ namespace TelephoneBook {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                PhoneBookDataSet ds = new PhoneBookDataSet();
+                PhoneBookDataSet1 ds = new PhoneBookDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -881,7 +881,7 @@ namespace TelephoneBook {
         }
     }
 }
-namespace TelephoneBook.PhoneBookDataSetTableAdapters {
+namespace TelephoneBook.PhoneBookDataSet1TableAdapters {
     
     
     /// <summary>
@@ -1088,25 +1088,19 @@ SELECT Person_ID, Firstname, Lastname, Address, City, State, Zipcode, HomePhone,
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Person_ID, Firstname, Lastname, Address, City, State, Zipcode, HomePhone, " +
                 "WorkPhone, Extension, Notes FROM dbo.Phonebook";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT Person_ID, Firstname, Lastname, Address, City, State, Zipcode, HomePhone, " +
-                "WorkPhone, Extension, Notes \r\nFROM dbo.Phonebook\r\nWHERE (Lastname = @lastname)";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@lastname", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "Lastname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(PhoneBookDataSet.PhonebookDataTable dataTable) {
+        public virtual int Fill(PhoneBookDataSet1.PhonebookDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1119,9 +1113,9 @@ SELECT Person_ID, Firstname, Lastname, Address, City, State, Zipcode, HomePhone,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual PhoneBookDataSet.PhonebookDataTable GetData() {
+        public virtual PhoneBookDataSet1.PhonebookDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            PhoneBookDataSet.PhonebookDataTable dataTable = new PhoneBookDataSet.PhonebookDataTable();
+            PhoneBookDataSet1.PhonebookDataTable dataTable = new PhoneBookDataSet1.PhonebookDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1129,33 +1123,14 @@ SELECT Person_ID, Firstname, Lastname, Address, City, State, Zipcode, HomePhone,
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByContactLastName(PhoneBookDataSet.PhonebookDataTable dataTable, string lastname) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((lastname == null)) {
-                throw new global::System.ArgumentNullException("lastname");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(lastname));
-            }
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PhoneBookDataSet.PhonebookDataTable dataTable) {
+        public virtual int Update(PhoneBookDataSet1.PhonebookDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PhoneBookDataSet dataSet) {
+        public virtual int Update(PhoneBookDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "Phonebook");
         }
         
@@ -1627,7 +1602,7 @@ SELECT Person_ID, Firstname, Lastname, Address, City, State, Zipcode, HomePhone,
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(PhoneBookDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(PhoneBookDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._phonebookTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Phonebook.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1646,7 +1621,7 @@ SELECT Person_ID, Firstname, Lastname, Address, City, State, Zipcode, HomePhone,
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(PhoneBookDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(PhoneBookDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._phonebookTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Phonebook.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1664,7 +1639,7 @@ SELECT Person_ID, Firstname, Lastname, Address, City, State, Zipcode, HomePhone,
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(PhoneBookDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(PhoneBookDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._phonebookTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Phonebook.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1706,7 +1681,7 @@ SELECT Person_ID, Firstname, Lastname, Address, City, State, Zipcode, HomePhone,
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(PhoneBookDataSet dataSet) {
+        public virtual int UpdateAll(PhoneBookDataSet1 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
