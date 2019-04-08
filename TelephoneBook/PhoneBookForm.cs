@@ -72,6 +72,28 @@ namespace TelephoneBook
 
         }
 
+        private void tsb_search_Click(object sender, EventArgs e)
+        {
+            string contactLastname = toolStripTextBox1.Text.Trim();
+            try
+            {
+
+                phonebookTableAdapter.FillByContactLastName(phoneBookDataSet.Phonebook, contactLastname);
+                if (phonebookBindingSource.Count == 0)
+                {
+                    MessageBox.Show("No customers records found for " + contactLastname);
+                    phonebookTableAdapter.Fill(phoneBookDataSet.Phonebook);
+
+
+                    toolStripButton2_Click(null, null);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         /*
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
