@@ -84,7 +84,7 @@
             // phonebookToolStripMenuItem
             // 
             this.phonebookToolStripMenuItem.Name = "phonebookToolStripMenuItem";
-            this.phonebookToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.phonebookToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.phonebookToolStripMenuItem.Text = "Phonebook";
             this.phonebookToolStripMenuItem.Click += new System.EventHandler(this.phonebookToolStripMenuItem_Click);
             // 
@@ -99,8 +99,9 @@
             // microsoftReportsToolStripMenuItem
             // 
             this.microsoftReportsToolStripMenuItem.Name = "microsoftReportsToolStripMenuItem";
-            this.microsoftReportsToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.microsoftReportsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.microsoftReportsToolStripMenuItem.Text = "Microsoft Reports";
+            this.microsoftReportsToolStripMenuItem.Click += new System.EventHandler(this.microsoftReportsToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 

@@ -22,5 +22,11 @@ namespace TelephoneBook
             PhoneBookForm frm = new PhoneBookForm();
             frm.Show();
         }
+
+        private void microsoftReportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReportForm frm = new ReportForm();
+            frm.Show();
+        }
     }
 }
