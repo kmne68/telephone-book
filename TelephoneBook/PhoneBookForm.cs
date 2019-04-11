@@ -94,6 +94,37 @@ namespace TelephoneBook
             }
         }
 
+
+        //private void firstnameTextBox_MouseEnter(object sender, EventArgs e)
+        //{
+        //    TextBox tbx = sender as TextBox;
+        //    tss_box.Text = tbx.Tag.ToString();
+        //}
+
+
+        //// Set the button's status tip.
+        //private void btn_MouseEnter(object sender, EventArgs e)
+        //{
+        //    ToolStripButton btn = sender as ToolStripButton;
+        //    lblStatusTip.Text = btn.Tag.ToString();
+        //}
+
+        //// Remove the button's status tip.
+        //private void btn_MouseLeave(object sender, EventArgs e)
+        //{
+        //    lblStatusTip.Text = "";
+        //}
+
+        private void firstnameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            //TextBox tbx = sender as TextBox;
+            //tss_box.Text = tbx.Tag.ToString();
+        }
+
+
+
+
+
         /*
         private void toolStripButton2_Click(object sender, EventArgs e)
         {

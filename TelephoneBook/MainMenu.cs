@@ -19,14 +19,25 @@ namespace TelephoneBook
 
         private void phonebookToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PhoneBookForm frm = new PhoneBookForm();
-            frm.Show();
+            PhoneBookForm form = new PhoneBookForm();
+            form.Show();
         }
 
         private void microsoftReportsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ReportForm frm = new ReportForm();
-            frm.Show();
+            ReportForm form = new ReportForm();
+            form.Show();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutForm form = new AboutForm();
+            form.Show();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
