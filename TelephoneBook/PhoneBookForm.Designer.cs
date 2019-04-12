@@ -410,7 +410,6 @@
             this.firstnameTextBox.TabIndex = 1;
             this.firstnameTextBox.Tag = "Enter first name";
             this.ToolTip.SetToolTip(this.firstnameTextBox, "Enter first name");
-            this.firstnameTextBox.TextChanged += new System.EventHandler(this.firstnameTextBox_TextChanged);
             // 
             // lastnameTextBox
             // 
