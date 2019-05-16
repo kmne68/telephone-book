@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.PhoneBookDataSet = new TelephoneBook.PhoneBookDataSet();
             this.PhonebookBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.PhoneBookDataSet = new TelephoneBook.PhoneBookDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.PhonebookTableAdapter = new TelephoneBook.PhoneBookDataSetTableAdapters.PhonebookTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.PhoneBookDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PhonebookBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PhoneBookDataSet)).BeginInit();
             this.SuspendLayout();
+            // 
+            // PhonebookBindingSource
+            // 
+            this.PhonebookBindingSource.DataMember = "Phonebook";
+            this.PhonebookBindingSource.DataSource = this.PhoneBookDataSet;
+            // 
+            // PhoneBookDataSet
+            // 
+            this.PhoneBookDataSet.DataSetName = "PhoneBookDataSet";
+            this.PhoneBookDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -50,16 +60,7 @@
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // PhoneBookDataSet
-            // 
-            this.PhoneBookDataSet.DataSetName = "PhoneBookDataSet";
-            this.PhoneBookDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // PhonebookBindingSource
-            // 
-            this.PhonebookBindingSource.DataMember = "Phonebook";
-            this.PhonebookBindingSource.DataSource = this.PhoneBookDataSet;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // PhonebookTableAdapter
             // 
@@ -74,8 +75,8 @@
             this.Name = "ReportForm";
             this.Text = "ReportForm";
             this.Load += new System.EventHandler(this.ReportForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.PhoneBookDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PhonebookBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PhoneBookDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

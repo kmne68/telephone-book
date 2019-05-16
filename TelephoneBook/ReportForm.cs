@@ -23,5 +23,10 @@ namespace TelephoneBook
             this.PhonebookTableAdapter.Fill(this.PhoneBookDataSet.Phonebook);
             this.reportViewer1.RefreshReport();
         }
+
+        private void reportViewer1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
